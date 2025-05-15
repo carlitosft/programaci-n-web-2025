@@ -1,23 +1,25 @@
 <?php 
 $cantidadPesos;
-$valorDolar = 40;
-$valorEuro = 43;
-$valorReal = 8;
+$valMoneda = [40, 43, 8, 'pepe'];
+var_dump($valMoneda);
+/* $nombreArray[]='objeto';
+ agrega un nuevo elemento al array y leasigna una nueva posicion (la ultima)*/
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $cantidadPesos = floatval($_POST["pesos"]);
     $moneda = $_POST["moneda"];
     switch($moneda) {
-        case "dolares":
-            $cantidadFinal = $cantidadPesos/$valorDolar;
-            echo "$cantidadPesos pesos uruguayos equivalen a " . $cantidadFinal . "DOLARES";
+        case "usd":
+            $cantidadFinal = $cantidadPesos/$valMoneda[0];
+            echo "$cantidadPesos pesos uruguayos equivalen a " . $cantidadFinal . " DOLARES";
             break;
-        case "Euros":
-            $cantidadFinal = $cantidadPesos/$valorEuro;
-            echo "$cantidadPesos pesos uruguayos equivalen a " .  $cantidadFinal . "EUROS";
+        case "eur":
+            $cantidadFinal = $cantidadPesos/$valMoneda[1];
+            echo "$cantidadPesos pesos uruguayos equivalen a " .  $cantidadFinal . " EUROS";
             break;
-        case "Reales":
-            $cantidadFinal = $cantidadPesos/$valorReal;
-            echo "$cantidadPesos pesos uruguayos equivalen a " .  $cantidadFinal . "REALES";
+        case "bra":
+            $cantidadFinal = $cantidadPesos/$valMoneda[2];
+            echo "$cantidadPesos pesos uruguayos equivalen a " .  $cantidadFinal . " REALES";
             break;
         default:
             echo "No es una moneda válida.";
