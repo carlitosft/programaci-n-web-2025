@@ -1,7 +1,7 @@
 <?php 
 $cantidadPesos;
 $valMoneda = [40, 43, 8, 'pepe'];
-var_dump($valMoneda);
+
 /* $nombreArray[]='objeto';
  agrega un nuevo elemento al array y leasigna una nueva posicion (la ultima)*/
 
