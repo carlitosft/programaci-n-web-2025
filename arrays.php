@@ -12,5 +12,6 @@ $contNo ++;
 }
 
 }
-echo "dias laborables:" . $contLab . "<br>" . "dias no laborables:" . $contNo;
+
+echo "<br>" . "dias laborables:" . $contLab . "<br>" . "dias no laborables:" . $contNo;
 ?>
