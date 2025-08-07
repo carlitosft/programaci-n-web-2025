@@ -71,15 +71,26 @@ elementos de un arreglo. */
 echo $claves[0] . $inventario["The legend of zelda"]["consola"] . $claves[1] . $inventario["Super Mario Bros 3"]["consola"] . $claves[2] . $inventario["Chronno Trigger"]["consola"];
 var_dump($inventario);
 
-foreach ($inventario as $nombrejuego => $detalles) {
-    
-   if ($detalles['consola'] == 'NES') {
-            $detalles['precio'] = $detalles['precio']*0.9;
+foreach ($inventario as $nombrejuego => &$detalles) {
+    if ($detalles['consola'] == 'NES') {
+        $detalles['precio'] = $detalles['precio'] * 0.9;
     }
-    
 }
 
-
 var_dump($inventario);
+
+$busqueda = "Chronno Trigger";
+
+foreach ($inventario as $nombrejuego => $detalles) {
+    if ($nombrejuego == $busqueda) {
+        echo 'Juego encontrado';
+    }
+}
+
+$inventario["Sonic the Hedgehog"]['consola'] = "sega genesis";
+$inventario["Sonic the Hedgehog"]['precio'] = 55.00;
+$inventario["Sonic the Hedgehog"]['stock'] = "8";
+
+
 
     ?>
