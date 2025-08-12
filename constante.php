@@ -1,7 +1,7 @@
 <?php
 echo "constantes";
 const gravedad = 3.14;
-const gravedad = 12.1;
+const gravedad = 12.11
  /* 1) el error fue que no hay forma de cambiar el valor de una constante,
  paraeso se usa el valor de una variable
  2) el erro indica que no se pueden declarar 2 valores a una constante 
