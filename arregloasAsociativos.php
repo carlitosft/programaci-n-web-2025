@@ -39,6 +39,18 @@ $inventario = [
         "stock" => "8",
         "venta" => "en venta",
     ],
+    "Minecraft" => [
+        "consola" => "PC",
+        "lanzamiento" => "2009",
+        "precio" => 100,
+        "stock" => "10",
+        "venta" => "no esta en venta",
+
+
+
+
+
+    ],  
 
 
 
@@ -59,14 +71,14 @@ $claves = array_keys($inventario);
 echo $claves[0] . $inventario['The legend of zelda'] ["consola"] . "<br>"; 
 echo $persona1["nacimiento"]["año"] . "<br>";
 
-/*Actividad 5: Listando Todos los Productos del Inventario 
-Necesitamos una vista general de todo lo que tenemos para una página de "Nuestros Productos". Hay 
-que generar un listado simple que muestre el título y la consola de cada juego en nuestro inventario. 
-Utilizando la variable $inventario, escribe un código que procese la colección completa y, por cada 
-juego, imprima una línea con su título y su consola. 
-Tip: Para procesar cada juego, necesitas "visitar" cada elemento de tu arreglo de inventario uno por 
-uno. Investiga qué estructura de control en PHP te permite ejecutar un bloque de código para todos los 
-elementos de un arreglo. */
+    
+/*
+Sello del desarrolador
+nombre: Carlos gurruchaga 
+videojuego insignia: minecraft
+
+
+*/
 
 echo $claves[0] . $inventario["The legend of zelda"]["consola"] . $claves[1] . $inventario["Super Mario Bros 3"]["consola"] . $claves[2] . $inventario["Chronno Trigger"]["consola"];
 var_dump($inventario);
@@ -86,11 +98,23 @@ foreach ($inventario as $nombrejuego => $detalles) {
         echo 'Juego encontrado';
     }
 }
+echo "<br><br>";
+var_dump($inventario);
 
 $inventario["Sonic the Hedgehog"]['consola'] = "sega genesis";
 $inventario["Sonic the Hedgehog"]['precio'] = 55.00;
 $inventario["Sonic the Hedgehog"]['stock'] = "8";
+$inventario["Sonic the Hedgehog"]['venta'] = "en venta";
 
+echo "<br><br>";
+var_dump($inventario);
+echo "<br><br>";
 
+unset($inventario['The legend of zelda']);
+var_dump($inventario);
+echo "<br><br>";
+
+ksort($inventario);
+var_dump($inventario);
 
     ?>
