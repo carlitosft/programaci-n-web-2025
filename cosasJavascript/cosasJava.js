@@ -33,3 +33,4 @@ let areaRectangulo = alto* ancho;
 return areaRectangulo
 }
 console.log(calculaRectangulo(ancho, alto));
+alert(`El area de tu rectangulo es: ${calculaRectangulo(anchoRectangulo, altoRectangulo)}`);
