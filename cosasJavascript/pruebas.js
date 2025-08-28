@@ -1,0 +1,1 @@
+document.getElementById("encabezado").textContent = "Explorando el munod de js";
